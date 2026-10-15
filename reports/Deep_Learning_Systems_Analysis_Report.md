@@ -130,12 +130,12 @@ Doubling the channel widths increased test accuracy from 57.39% to 63.53%, a gai
 predictions among 25,250 test images. Test cross-entropy decreased from 1.6429 to 1.4201. Both metrics therefore support the wider CNN's
 improvement in this run.
 
-![Baseline versus wider CNN validation performance](baseline_vs_wider_cnn_validation_curves.png)
+![Baseline versus wider CNN validation performance](../figures/baseline_vs_wider_cnn_validation_curves.png)
 
 **Figure 1.** Validation cross-entropy and top-1 accuracy for the baseline and wider CNN. Both configurations use a maximum of 30 epochs,
 without dropout or label smoothing.
 
-![Training and validation loss for baseline and wider CNNs](baseline_and_wider_cnn_training_validation_loss.png)
+![Training and validation loss for baseline and wider CNNs](../figures/baseline_and_wider_cnn_training_validation_loss.png)
 
 **Figure 2.** Training and validation cross-entropy for the baseline and wider CNN, shown on the same vertical scale. Neither configuration uses dropout or label smoothing.
 
@@ -149,7 +149,7 @@ The improvement required additional computation. Trainable parameters increased 
 
 Label smoothing increased baseline test accuracy from 57.39% to 58.21%, a gain of 0.82 percentage points. However, test cross-entropy increased from 1.6429 to 1.6891, so the change did not improve both evaluation metrics.
 
-![Baseline versus label smoothing validation performance](baseline_vs_label_smoothing_validation_curves.png)
+![Baseline versus label smoothing validation performance](../figures/baseline_vs_label_smoothing_validation_curves.png)
 
 **Figure 3.** Validation cross-entropy and top-1 accuracy for the baseline CNN with and without label smoothing of 0.1. Validation cross-entropy is calculated without smoothing for both configurations.
 
@@ -160,7 +160,7 @@ The validation curves show broadly similar learning trajectories. At the selecte
 Adding dropout reduced validation cross-entropy from 1.7141 to 1.6580 and increased validation accuracy from 58.01% to 58.58% at the selected checkpoints. Test cross-entropy decreased from 1.4201 to 1.3887, while test accuracy increased from 63.53% to 63.70%, corresponding to
 42 additional correct predictions.
 
-![Effect of dropout on wider CNN validation performance](wider_cnn_vs_dropout_validation_curves.png)
+![Effect of dropout on wider CNN validation performance](../figures/wider_cnn_vs_dropout_validation_curves.png)
 
 **Figure 4.** Validation cross-entropy and top-1 accuracy for the wider CNN with and without dropout of 0.3. Both configurations use a maximum of 30 epochs and no label smoothing.
 
@@ -170,7 +170,7 @@ These results suggest a modest benefit for this run, with a clearer improvement 
 
 Increasing the dropout model's maximum epochs from 30 to 60 improved selected-checkpoint validation accuracy from 58.58% to 60.20% and reduced validation cross-entropy from 1.6580 to 1.5948. Test accuracy increased from 63.70% to 65.63%, a gain of 1.93 percentage points, or 488 additional correct predictions. Test cross-entropy decreased from 1.3887 to 1.3240.
 
-![Effect of maximum training epochs on validation performance](dropout_30_vs_60_max_epochs_validation_curves.png)
+![Effect of maximum training epochs on validation performance](../figures/dropout_30_vs_60_max_epochs_validation_curves.png)
 
 **Figure 5.** Validation performance for the wider CNN with dropout under maximum limits of 30 and 60 epochs. The curves overlap through epoch 30 to the recorded precision. The dashed line marks the original 30-epoch limit; the extended run ends at epoch 44.
 
@@ -178,7 +178,7 @@ Early stopping ended the extended run at epoch 44 after five consecutive epochs 
 
 The improvement indicates that the original 30-epoch limit constrained performance for this configuration. It does not imply that accuracy would continue improving indefinitely with additional epochs.
 
-![Training and validation loss under different maximum epoch limits](dropout_training_validation_loss_by_epoch_limit.png)
+![Training and validation loss under different maximum epoch limits](../figures/dropout_training_validation_loss_by_epoch_limit.png)
 
 **Figure 6.** Training and validation cross-entropy for the wider CNN with dropout under maximum limits of 30 and 60 epochs. Stars identify the checkpoints selected by minimum validation loss. The extended run stopped at epoch 44.
 
@@ -203,7 +203,7 @@ Per-class recall varied substantially, from 19.6% for apple pie to 96.8% for eda
 
 These confusions suggest difficulty distinguishing foods with similar appearances. For example, steak and filet mignon can share visual characteristics, while rice-based dishes may have overlapping textures. The confusion counts identify recurring errors but do not establish which features caused the predictions.
 
-![Random sample of wider CNN test misclassifications](wider_cnn_test_misclassification_samples.png)
+![Random sample of wider CNN test misclassifications](../figures/wider_cnn_test_misclassification_samples.png)
 
 **Figure 7.** Twelve reproducibly sampled misclassified test images from the wider CNN without dropout. Normalization is reversed for display, showing the resized and cropped inputs seen by the model.
 
