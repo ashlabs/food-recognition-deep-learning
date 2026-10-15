@@ -218,3 +218,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local environment and notebook checkpoints
+.venv/
+.ipynb_checkpoints/
+.DS_Store
+
+# Downloaded and processed datasets
+data/
+
+# Saved model weights
+*.pt
+*.pth
+!checkpoints/*_best.pt
