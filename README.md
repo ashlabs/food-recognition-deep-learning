@@ -54,7 +54,7 @@ Training uses random resized crops and horizontal flips. Validation and test use
 ## Project Files
 
 - [Notebook](deep_learning.ipynb)
-- [Analysis report — PDF](reports/Deep_Learning_Systems_Analysis_Report_Final.pdf)
+- [Analysis report — PDF](reports/Deep_Learning_Systems_Analysis_Report.pdf)
 - [Analysis report — Markdown](reports/Deep_Learning_Systems_Analysis_Report.md)
 - [Dependencies](requirements.txt)
 - [Figures](figures/)
