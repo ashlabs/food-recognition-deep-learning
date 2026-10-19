@@ -68,7 +68,7 @@ The recorded environment uses Python 3.14.0, PyTorch 2.14.1, and torchvision 0.2
 ```bash
 git clone https://github.com/ashlabs/food-recognition-deep-learning.git
 cd food-recognition-deep-learning
-git checkout develop
+git checkout main
 
 python3 -m venv .venv
 source .venv/bin/activate
